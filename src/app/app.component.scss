@@ -1,0 +1,73 @@
+.displayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .userList {
+        width: 50%;
+        min-width: 300px;
+
+        table {
+            thead, tbody {
+                th:nth-child(5), td:nth-child(5) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.user-to-delete {
+    span {
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    list-style: none;
+    li:nth-child(5) {
+        display: none;
+    }
+}
+
+img.avatar-displayer-30 {
+    height: 30px;
+    width: 30px;
+    background-size: 30px !important;
+    background-repeat: no-repeat !important;
+
+    &.avatar-1 {
+        background: url(../assets/1.png);
+    }
+    &.avatar-2 {
+        background: url(../assets/2.png);
+    }
+    &.avatar-3 {
+        background: url(../assets/3.png);
+    }
+    &.avatar-4 {
+        background: url(../assets/4.png);
+    }
+    &.avatar-5 {
+        background: url(../assets/5.png);
+    }
+    &.avatar-6 {
+        background: url(../assets/6.png);
+    }
+    &.avatar-7 {
+        background: url(../assets/7.png);
+    }
+    &.avatar-8 {
+        background: url(../assets/8.png);
+    }
+    &.avatar-9 {
+        background: url(../assets/9.png);
+    }
+    &.avatar-10 {
+        background: url(../assets/10.png);
+    }
+    &.avatar-11 {
+        background: url(../assets/11.png);
+    }
+    &.avatar-12 {
+        background: url(../assets/12.png);
+    }
+}

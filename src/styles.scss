@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+
+    app-root{
+        app-root {
+            display: none;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1.3em;
+        display: grid;
+        grid-template-columns: 30% auto;
+    
+        a {
+            color: white;
+        }
+    }
+
+    section {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2em;
+    }
+
+    .fa {
+        text-decoration: none !important;
+    }
+}
+
+.btn-outline-red {
+    border: 1px solid #bd2130 !important;
+}
+
+.btn-outline-red:hover {
+    color: #fff !important;
+    background-color: #bd2130;
+    border-color: #bd2130;
+}
+
+.btn-outline-blue {
+    border: 1px solid #007bff !important;
+}
+
+.btn-outline-blue:hover {
+    color: #fff !important;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
