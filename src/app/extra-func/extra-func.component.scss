@@ -1,0 +1,13 @@
+.extra-function-displayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button:first-child{
+        margin-right: 5px;
+    }
+
+    button:last-child{
+        margin-left: 5px;
+    }
+}

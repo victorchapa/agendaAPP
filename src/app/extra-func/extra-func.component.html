@@ -1,0 +1,23 @@
+<div class="extra-function-displayer">
+    <button class="btn btn-outline-red" (click)="clearAllData()">Remove ALL users!</button>
+    <button class="btn btn-outline-blue" (click)="addRandomUser()">Create a random user now!</button>
+</div>
+
+<ng-template #deleteAllModal let-modal>
+    <div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Removing ALL the data</h4>
+     	<button #closemodal type="button" class="close" aria-label="Close" (click)="modal.dismiss('cross-click')">
+     		<span aria-hidden="true">×</span>
+      	</button>
+    </div>
+    <div class="modal-body">
+		<div>
+			<p>Are you sure to remove ALL the user that we have at the moment?</p>
+		</div>
+  	</div>
+  	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-red" (click)="modal.close('cancel')">Cancel</button>
+		<button type="button" ngbAutofocus class="btn btn-outline-dark" (click)="removeAll(modal)" autofocus>Remove</button>
+  	</div>
+</ng-template>
+

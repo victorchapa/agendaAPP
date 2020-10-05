@@ -1,0 +1,60 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+     <h5 *ngIf="success">Your form is valid!</h5> 
+     <div class="row">
+          <div class="col-sm-4">
+               <label>
+                    Name:
+                    <input type="text" formControlName="name">
+                    <div *ngIf="submitted && userForm.controls.name.errors" class="error">
+                         <div *ngIf="userForm.controls.name.errors.required">Your name is required!</div>
+                         <div *ngIf="userForm.controls.name.errors?.nameValid">There's a lot of rules, mate!</div>
+                    </div>
+               </label>
+          </div>
+          <div class="col-sm-4">
+               <label>
+                    Age:
+                    <input type="number" formControlName="age" (keyup)="checkAgeForRelocation($event)">
+                    <div *ngIf="submitted && userForm.controls.age.errors" class="error">
+                         <div *ngIf="userForm.controls.age.errors.required">Age is required!</div>
+                         <div *ngIf="userForm.controls.age.errors?.ageValid">Age needs to be between 18-45!</div>
+                    </div>
+               </label>
+          </div>
+          <div class="col-sm-4">
+               <label>
+                    Phone:
+                    <input type="text" formControlName="phone" (keyup)="applyPhoneMask($event)" (keypress)="preventKey($event)" [attr.maxlength]="maxLength">
+                    <div *ngIf="submitted && userForm.controls.phone.errors" class="error">
+                         <div *ngIf="userForm.controls.phone.errors.required">Phone number is required!</div>
+                         <div *ngIf="maxLengthPassed">Phone number has a max of 19 chars!</div>
+                    </div>
+               </label>
+          </div>
+     </div>
+
+     <div class="row">
+          <div class="col-sm-8">
+               <label>
+                    Email:
+                    <input type="text" formControlName="email">
+                    <div *ngIf="submitted && userForm.controls.email.errors" class="error">
+                         <div *ngIf="userForm.controls.email.errors.required">Email is required!</div>
+                         <div *ngIf="userForm.controls.email.errors.email">Please enter a valid email!</div>
+                    </div>
+               </label>          
+          </div>
+          <div class="col-sm-4">
+               <label>
+                    Relocation:
+                    <input type="checkbox" formControlName="relocation">
+                    <div *ngIf="submitted && userForm.controls.relocation.errors" class="error">
+                         <div *ngIf="userForm.controls.relocation.errors.required">Relocation is required!</div>
+                    </div>
+               </label>
+          </div>
+     </div>
+     
+     <input *ngIf="!editionMode" type="submit" value="Add User" class="cta">
+   
+</form>
